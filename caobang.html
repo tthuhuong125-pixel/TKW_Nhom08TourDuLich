@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tour Cao Bằng</title>
+<link rel="stylesheet" href="caobang.css">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ICON -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    
+    <div class="logo">
+        MÂY NGÀN
+    </div>
+
+    <nav class="nav">
+        <a href="#">Trang chủ</a>
+        <a href="#">Tour Du lịch</a>
+        <a href="#">Thông tin & Hướng dẫn</a>
+        <a href="#">Về chúng tôi</a>
+    </nav>
+
+</header>
+
+
+<!-- CONTENT -->
+<div class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+
+        <h1 class="tour-title">TOUR CAO BẰNG – THÁC BẢN GIỐC – PÁC BÓ – HỒ BA BỂ</h1>
+
+            <div class="rating">
+            <span class="score">5/5</span>
+            <span class="text">Tuyệt vời</span>
+            </div>
+
+            <!-- IMAGE SLIDER -->
+
+            <div class="slider">
+
+            <button class="prev">❮</button>
+
+            <img id="mainImage" class="main-img"
+            src="Coc_Bo.jpg">
+
+            <button class="next">❯</button>
+
+            </div>
+
+            <!-- THUMBNAIL -->
+
+            <div class="gallery">
+
+                <img src="Coc_Bo.jpg" onclick="changeImage(this)">
+                <img src="z4435101553498-770e56e76f6d0c9c5e08e8e1e441ee8d-1-1160.jpg" onclick="changeImage(this)">
+                <img src="tour-du-lich-ha-noi-ho-ba-be-thac-ban-gioc-3n2d-1.jpg" onclick="changeImage(this)">
+                <img src="thac1-1716347136-4789-1716347246.jpg" onclick="changeImage(this)">
+                <img src="du-lich-suoi-le-nin-02.jpg" onclick="changeImage(this)">
+                <img src="tour-du-lich-ha-noi-ho-ba-be-thac-ban-gioc-3n2d-6.jpg" onclick="changeImage(this)">
+
+            </div>
+
+            <!-- TAB MENU -->
+
+            <div class="tabs">
+
+            <a href="#tongquan" class="active">Tổng quan</a>
+            <a href="#lichtrinh">Lịch trình</a>
+            <a href="#danhgia">Đánh giá</a>
+            <a href="#tourtongtu">Tour tương tự</a>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div id="tongquan" class="tour-content">
+
+                <h2>Tổng quan</h2>
+
+                <p>
+                Chinh phục mảnh đất Cao Bằng, chiêm ngưỡng cảnh đẹp Thác Bản Giốc – một trong
+                những thác nước nằm trên núi đẹp và lớn nhất thế giới, đã được bình chọn là
+                một trong 10 thác nước kỳ vĩ nhất thế giới. Tham quan Khu di tích lịch sử Hang
+                Pác Bó và Hồ Ba bể – một thắng cảnh tuyệt đẹp ở Bắc Kạn. Hồ Ba Bể là thắng
+                cảnh thiên nhiên độc đáo của tỉnh Bắc Kạn và được Unesco xếp vào danh sách
+                hai mươi hồ nước ngọt đẹp nhất thế giới cần được bảo vệ và phát triển.
+                <br>Đặc điểm nổi bật:
+                <ul>
+                    <li>Thăm thác nước lớn thứ 4 trong 10 thác nước lớn nhất trên thế giới nằm giữa đường biên hai quốc gia.</li>
+                    <li>Thăm di tích Pác Bó với dòng suối trong như ngọc và chụp hình cột mốc km0 đường Hồ Chí Minh.</li>
+                    <li>Khám phá một trong những hồ nước tự nhiên trên núi đẹp nhất trên thế giới.</li>
+                    <li>Khám phá văn hóa của đồng bào dân tộc Tày, Nùng...</li>
+                </ul>
+                </p>
+
+            </div>
+
+            <div id="lichtrinh" class="tour-content">
+
+                <h2>Lịch trình</h2>
+
+                <p>
+                
+                </p>
+
+            </div>
+
+            <div id="danhgia" class="tour-content">
+
+                <h2>Đánh giá</h2>
+
+                <p>
+                
+                </p>
+
+            </div>
+
+            <div id="tourtuongtu" class="tour-content">
+
+                <h2>Tour tương tự</h2>
+
+                <p>
+                
+                </p>
+
+            </div>
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="right">
+
+    <h2 class="price">
+    Giá từ <span>2.680.000đ</span>
+    </h2>
+
+    <ul class="tour-info">
+
+    <li>
+    <i class="fa-solid fa-ticket"></i>
+    <span>Mã Tour : CB0002</span>
+    </li>
+
+    <li>
+    <i class="fa-regular fa-clock"></i>
+    <span>Thời gian : 3N2Đ</span>
+    </li>
+
+    <li>
+    <i class="fa-solid fa-plane"></i>
+    <span>Phương tiện : Xe du lịch</span>
+    </li>
+
+    <li>
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Khởi hành : <b class="location">Hà Nội</b></span>
+    </li>
+
+    </ul>
+
+    <h3 class="tour-name">Cao Bằng – Thác Bản Giốc – Pác Bó – Hồ Ba Bể</h3>
+
+    <button class="book-btn">
+    Đặt Ngay
+    </button>
+
+    <div class="policy">
+
+    <div class="policy-item">
+    <i class="fa-regular fa-circle-check"></i>
+    <p><b>Cam kết vững vàng</b> - Sát cánh suốt mọi hành trình</p>
+    </div>
+
+    <div class="policy-item">
+    <i class="fa-regular fa-circle-check"></i>
+    <p><b>Hỗ trợ huỷ chỗ</b> - Tối đa 24h trước khi khởi hành</p>
+    </div>
+
+    </div>
+
+    <div class="contact">
+
+    <button class="btn-outline">
+    <i class="fa-solid fa-phone"></i>
+    Gọi điều hành tour
+    </button>
+
+    <button class="btn-outline">
+    <i class="fa-regular fa-comment"></i>
+    Liên hệ tư vấn
+    </button>
+
+    </div>
+
+</div>
+
+</div>
+
+<script>
+
+function changeImage(img){
+document.getElementById("mainImage").src = img.src;
+}
+
+const images = document.querySelectorAll(".gallery img");
+let index = 0;
+
+document.querySelector(".next").onclick = () => {
+index++;
+if(index >= images.length) index = 0;
+document.getElementById("mainImage").src = images[index].src;
+}
+
+document.querySelector(".prev").onclick = () => {
+index--;
+if(index < 0) index = images.length-1;
+document.getElementById("mainImage").src = images[index].src;
+}
+
+</script>
+
+<script id="tab-switch">
+const tabs = document.querySelectorAll(".tabs a");
+
+tabs.forEach(tab => {
+    tab.addEventListener("click", function(){
+
+        tabs.forEach(t => t.classList.remove("active"));
+
+        this.classList.add("active");
+
+    });
+});
+</script>
+ <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3 class="footer-title">Về chúng tôi</h3>
+                <p class="company-name">CÔNG TY TNHH DU LỊCH MÂY NGÀN</p>
+                <ul class="contact-info">
+                    <li><strong>Địa chỉ:</strong> 123 Đường Fansipan, Sa Pa, Lào Cai</li>
+                    <li><strong>SĐT:</strong> 024.1234.5678</li>
+                    <li><strong>Email:</strong> info@mayngan.vn</li>
+                    <li><strong>Tổng đài:</strong> 1900 6789</li>
+                    <li><strong>Hotline:</strong> 0988 123 456</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Thông tin & Hướng dẫn</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Hướng dẫn đặt tour</a></li>
+                    <li><a href="#">Kinh nghiệm trekking</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+    </div>
+</body>
+</html>

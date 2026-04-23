@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tour Tà Xùa</title>
+<link rel="stylesheet" href="taxua.css">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ICON -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    
+    <div class="logo">
+        MÂY NGÀN
+    </div>
+
+    <nav class="nav">
+        <a href="#">Trang chủ</a>
+        <a href="#">Tour Du lịch</a>
+        <a href="#">Thông tin & Hướng dẫn</a>
+        <a href="#">Về chúng tôi</a>
+    </nav>
+
+</header>
+
+
+<!-- CONTENT -->
+<div class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+
+        <h1 class="tour-title">TOUR DU LỊCH SĂN MÂY TÀ XÙA - BẮC YÊN</h1>
+
+            <div class="rating">
+            <span class="score">5/5</span>
+            <span class="text">Tuyệt vời</span>
+            </div>
+
+            <!-- IMAGE SLIDER -->
+
+            <div class="slider">
+
+            <button class="prev">❮</button>
+
+            <img id="mainImage" class="main-img"
+            src="56f900eae79970cbbf5d3a91cddc708f.webp">
+
+            <button class="next">❯</button>
+
+            </div>
+
+            <!-- THUMBNAIL -->
+
+            <div class="gallery">
+
+                <img src="56f900eae79970cbbf5d3a91cddc708f.webp" onclick="changeImage(this)">
+                <img src="20adad5e5016277e8dce46f1e428139e.webp" onclick="changeImage(this)">
+                <img src="9bd07872243b2cda0840cd874b425caa.webp" onclick="changeImage(this)">
+                <img src="0434531b66855174fdb33d58d366eec5.webp" onclick="changeImage(this)">
+                <img src="a408dd708a1c39c6aa8c1a35a9345e0b.webp" onclick="changeImage(this)">
+            </div>
+
+            <!-- TAB MENU -->
+
+            <div class="tabs">
+
+            <a href="#tongquan" class="active">Tổng quan</a>
+            <a href="#lichtrinh">Lịch trình</a>
+            <a href="#danhgia">Đánh giá</a>
+            <a href="#tourtongtu">Tour tương tự</a>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div id="tongquan" class="tour-content">
+
+                <h2>Tổng quan</h2>
+
+                <p>
+                Nằm ở huyện Bắc Yên, tỉnh Sơn La, Tà Xùa là ngọn núi mà dân mê leo núi - chụp
+                ảnh nhất định sẽ phải đến một lần trong đời. Tà Xùa được ca ngợi là một trong
+                những thiên đường săn mây miền Bắc. Những ngày chớm thu, dân tình lại nô nức
+                kéo đến nơi đây thưởng mây, ngắm núi đồi hùng vĩ.
+                <br>Điểm nổi bật:
+                <ul>
+                    <li>Thưởng ngoạn khung cảnh Tà Xùa chìm trong bốn bề mây phủ, tạo nên
+                        khung cảnh đẹp tựa chốn bồng lai tiên cảnh, khiến bạn không thể nào quên.</li>
+                    <li>Chiêm ngưỡng hoàng hôn trên Đỉnh Gió tại xã Xím Vàng.</li>
+                    <li>Chinh phục sống lưng khủng long tại Háng Đồng, với địa hình uốn lượn, gai góc đầy thách thức.</li>
+                </ul>
+                </p>
+
+            </div>
+
+            <div id="lichtrinh" class="tour-content">
+
+                <h2>Lịch trình</h2>
+
+                <p>
+                
+                </p>
+
+            </div>
+
+            <div id="danhgia" class="tour-content">
+
+                <h2>Đánh giá</h2>
+
+                <p>
+                
+                </p>
+
+            </div>
+
+            <div id="tourtuongtu" class="tour-content">
+
+                <h2>Tour tương tự</h2>
+
+                <p>
+                
+                </p>
+
+            </div>
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="right">
+
+    <h2 class="price">
+    Giá từ <span>6.380.000đ</span>
+    </h2>
+
+    <ul class="tour-info">
+
+    <li>
+    <i class="fa-solid fa-ticket"></i>
+    <span>Mã Tour : TX0004</span>
+    </li>
+
+    <li>
+    <i class="fa-regular fa-clock"></i>
+    <span>Thời gian : 4N3Đ</span>
+    </li>
+
+    <li>
+    <i class="fa-solid fa-plane"></i>
+    <span>Phương tiện : Máy bay</span>
+    </li>
+
+    <li>
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Khởi hành : <b class="location">Hồ Chí Minh</b></span>
+    </li>
+
+    </ul>
+
+    <h3 class="tour-name">Tà Xùa - Bắc Yên</h3>
+
+    <button class="book-btn">
+    Đặt Ngay
+    </button>
+
+    <div class="policy">
+
+    <div class="policy-item">
+    <i class="fa-regular fa-circle-check"></i>
+    <p><b>Cam kết vững vàng</b> - Sát cánh suốt mọi hành trình</p>
+    </div>
+
+    <div class="policy-item">
+    <i class="fa-regular fa-circle-check"></i>
+    <p><b>Hỗ trợ huỷ chỗ</b> - Tối đa 24h trước khi khởi hành</p>
+    </div>
+
+    </div>
+
+    <div class="contact">
+
+    <button class="btn-outline">
+    <i class="fa-solid fa-phone"></i>
+    Gọi điều hành tour
+    </button>
+
+    <button class="btn-outline">
+    <i class="fa-regular fa-comment"></i>
+    Liên hệ tư vấn
+    </button>
+
+    </div>
+
+</div>
+
+</div>
+
+<script>
+
+function changeImage(img){
+document.getElementById("mainImage").src = img.src;
+}
+
+const images = document.querySelectorAll(".gallery img");
+let index = 0;
+
+document.querySelector(".next").onclick = () => {
+index++;
+if(index >= images.length) index = 0;
+document.getElementById("mainImage").src = images[index].src;
+}
+
+document.querySelector(".prev").onclick = () => {
+index--;
+if(index < 0) index = images.length-1;
+document.getElementById("mainImage").src = images[index].src;
+}
+
+</script>
+
+<script id="tab-switch">
+const tabs = document.querySelectorAll(".tabs a");
+
+tabs.forEach(tab => {
+    tab.addEventListener("click", function(){
+
+        tabs.forEach(t => t.classList.remove("active"));
+
+        this.classList.add("active");
+
+    });
+});
+</script>
+ <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3 class="footer-title">Về chúng tôi</h3>
+                <p class="company-name">CÔNG TY TNHH DU LỊCH MÂY NGÀN</p>
+                <ul class="contact-info">
+                    <li><strong>Địa chỉ:</strong> 123 Đường Fansipan, Sa Pa, Lào Cai</li>
+                    <li><strong>SĐT:</strong> 024.1234.5678</li>
+                    <li><strong>Email:</strong> info@mayngan.vn</li>
+                    <li><strong>Tổng đài:</strong> 1900 6789</li>
+                    <li><strong>Hotline:</strong> 0988 123 456</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Thông tin & Hướng dẫn</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Hướng dẫn đặt tour</a></li>
+                    <li><a href="#">Kinh nghiệm trekking</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+    </div>        
+</body>
+</html>

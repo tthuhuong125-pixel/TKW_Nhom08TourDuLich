@@ -1,0 +1,519 @@
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f5f5f5;
+}
+html{
+scroll-behavior:smooth;
+}
+/* HEADER */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#ecc34f;
+    padding:20px 80px;
+}
+
+/* logo */
+
+.logo{
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+/* menu */
+
+.nav a{
+    text-decoration:none;
+    color: #2d4135;
+    margin-left:40px;
+    font-size:16px;
+}
+
+.nav a:hover{
+    text-decoration:underline;
+}
+
+/* LAYOUT */
+
+.container{
+    display:flex;
+    gap:30px;
+    padding:30px 50px;
+    align-items:flex-start; /* quan trọng để 2 cột không kéo dài bằng nhau */
+}
+
+/* LEFT */
+
+.left{
+flex:3;
+}
+
+/* TITLE */
+
+.tour-title{
+font-size:28px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+/* RATING */
+
+.rating{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:15px;
+}
+
+.score{
+background:#769d69;
+color:white;
+padding:4px 10px;
+border-radius:6px;
+font-weight:600;
+}
+
+.text{
+color:#769d69;
+font-weight:600;
+}
+
+/* SLIDER */
+
+.slider{
+position:relative;
+}
+
+.main-img{
+width:100%;
+border-radius:10px;
+height:580px;
+object-fit:cover;
+}
+
+/* BUTTON */
+
+.prev, .next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.4);
+color:white;
+border:none;
+font-size:24px;
+padding:10px 14px;
+cursor:pointer;
+border-radius:6px;
+}
+
+.prev{ left:15px; }
+.next{ right:15px; }
+
+/* GALLERY */
+
+.gallery{
+display:flex;
+gap:10px;
+margin-top:12px;
+}
+
+.gallery img{
+width:120px;
+height:80px;
+object-fit:cover;
+border-radius:8px;
+cursor:pointer;
+opacity:0.8;
+transition:0.3s;
+}
+
+.gallery img:hover{
+opacity:1;
+transform:scale(1.05);
+}
+
+/* TABS */
+
+.tabs{
+display:flex;
+gap:30px;
+margin-top:20px;
+border-bottom:2px solid #eee;
+padding-bottom:10px;
+}
+
+.tabs a{
+font-weight:600;
+cursor:pointer;
+color:#555;
+text-decoration:none;
+}
+
+.tabs .active{
+color:#000;
+border-bottom:3px solid #769d69;
+padding-bottom:8px;
+}
+
+/* CONTENT */
+
+.tour-content{
+margin-top:30px;
+border-bottom:1px solid #e5e5e5;
+}
+
+.tour-content h2{
+margin-bottom:10px;
+}
+
+.tour-content p{
+color:#444;
+line-height:1.6;
+}
+
+.tour-content ul{
+color:#444;
+line-height:1.6;
+}
+
+/* RIGHT */
+
+/* CARD */
+
+.right{
+background:white;
+padding:28px;
+border-radius:12px;
+width:360px;
+box-shadow:0 4px 20px rgba(0,0,0,0.08);
+position: sticky;
+top: 20px;   /* khoảng cách với mép trên khi cuộn */
+}
+
+/* PRICE */
+
+.price{
+font-size:24px;
+font-weight:600;
+margin-bottom:15px;
+}
+
+.price span{
+color:#c62828;
+font-weight:700;
+}
+
+/* INFO */
+
+.tour-info{
+list-style:none;
+padding:0;
+margin:0 0 15px 0;
+}
+
+.tour-info li{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:14px;
+color:#555;
+font-size:15px;
+}
+
+.tour-info i{
+width:22px;
+font-size:16px;
+color:#888;
+}
+
+.location{
+color:#d2a836;
+}
+
+/* TOUR NAME */
+
+.tour-name{
+margin:10px 0 15px 0;
+font-weight:600;
+}
+
+/* BOOK BUTTON */
+
+.book-btn{
+width:100%;
+background:#769d69;
+color:white;
+border:none;
+padding:14px;
+font-size:17px;
+font-weight:600;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* POLICY */
+
+/* POLICY BOX */
+
+.policy{
+background:#f3f4ee;
+padding:18px;
+border-radius:12px;
+margin-top:20px;
+}
+
+/* từng dòng */
+
+.policy-item{
+display:flex;
+align-items:flex-start;
+gap:14px;
+margin-bottom:16px;
+}
+
+/* icon */
+
+.policy-item i{
+font-size:20px;
+color:#769d69;
+margin-top:3px;
+}
+
+/* text */
+
+.policy-item p{
+margin:0;
+font-size:15px;
+line-height:1.5;
+color:#333;
+}
+
+.policy-item b{
+font-weight:600;
+}
+
+
+/* CONTACT BUTTON */
+
+.contact{
+display:flex;
+gap:12px;
+margin-top:18px;
+}
+
+.btn-outline{
+flex:1;
+border:1px solid #ccc;
+padding:10px;
+border-radius:8px;
+background:white;
+font-size:14px;
+cursor:pointer;
+}
+
+.btn-outline i{
+margin-right:6px;
+}
+/* ================= 7. FOOTER (Màu xanh rêu đậm) ================= */
+.main-footer {
+    background-color: var(--dark-green);
+    color: #fff;
+    padding: 80px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Chia 3 cột */
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.footer-title {
+    font-size: 20px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--primary-yellow);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.company-name {
+    margin-bottom: 15px;
+    color: var(--primary-yellow);
+}
+
+.contact-info, .footer-links {
+    list-style: none;
+}
+
+.contact-info li, .footer-links li {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links li a:hover {
+    color: var(--primary-yellow);
+    padding-left: 5px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-link {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.social-link:hover {
+    color: var(--primary-yellow);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+/* ================= 1. BIẾN MÀU & FONT (Dùng chung cho cả nhóm) ================= */
+:root {
+    --primary-yellow: #ECC34F; /* Màu vàng nền Header */
+    --dark-green: #2D4135;    /* Màu xanh thương hiệu đậm */
+    --moss-green: #4B5A47;    /* Màu xanh rêu phụ trung bình */
+    --light-bg: #F3F4EE;      /* Màu nền trang kem nhạt */
+    --accent-orange: #D9732E; /* Màu cam cho Tour Hot - CHUẨN MÀU CAM */
+    --new-green: #769D69;     /* Màu xanh lá mạ cho Tour Mới */
+}
+
+/* ================= 2. RESET CƠ BẢN & FONT MONTSERRAT ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-green);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .brand-name, .company-name { font-weight: 700; }
+nav ul li a, .footer-title, .btn-main { font-weight: 500; }
+p, li, span, .contact-infoStrong { font-weight: 300; }
+* Policy Box */
+.policy {
+    background: #f3f4ee;
+    padding: 18px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+.policy-item { display: flex; gap: 14px; margin-bottom: 16px; }
+.policy-item i { color: var(--light-green); margin-top: 3px; }
+
+/* ================= 5. FOOTER (Màu xanh rêu đậm) ================= */
+.main-footer {
+    background-color: var(--dark-green);
+    color: #fff;
+    padding: 80px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px; /* Thẳng hàng với .container ở trên */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; 
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.footer-title {
+    font-size: 20px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--primary-yellow);
+    display: inline-block;
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.company-name {
+    margin-bottom: 15px;
+    color: var(--primary-yellow);
+    font-weight: bold;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links li a:hover {
+    color: var(--primary-yellow);
+    padding-left: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+}
+
+/* Responsive cơ bản */
+@media (max-width: 992px) {
+    .container { flex-direction: column; }
+    .right { width: 100%; position: static; }
+    .footer-container { grid-template-columns: 1fr 1fr; }
+}
