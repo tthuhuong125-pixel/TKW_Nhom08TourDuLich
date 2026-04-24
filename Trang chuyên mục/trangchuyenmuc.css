@@ -380,6 +380,7 @@ p, li, span, .contact-infoStrong { font-weight: 300; }
 }
 
 .main-nav ul li a:hover { color: #fff; }
+
 /* Nút Xem chi tiết */
 .btn-detail {
     display: block;
