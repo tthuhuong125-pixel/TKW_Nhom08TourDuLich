@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tour Sapa</title>
+<link rel="stylesheet" href="sapa.css">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ICON -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    
+    <div class="logo">
+        MÂY NGÀN
+    </div>
+
+    <nav class="nav">
+        <a href="#">Trang chủ</a>
+        <a href="#">Tour Du lịch</a>
+        <a href="#">Thông tin & Hướng dẫn</a>
+        <a href="#">Về chúng tôi</a>
+    </nav>
+
+</header>
+
+
+<!-- CONTENT -->
+<div class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+
+        <h1 class="tour-title">TOUR DU LỊCH SAPA</h1>
+
+            <div class="rating">
+            <span class="score">5/5</span>
+            <span class="text">Tuyệt vời</span>
+            </div>
+
+            <!-- IMAGE SLIDER -->
+
+            <div class="slider">
+
+            <button class="prev">❮</button>
+
+            <img id="mainImage" class="main-img"
+            src="tour-trekking-fansipan.jpg">
+
+            <button class="next">❯</button>
+
+            </div>
+
+            <!-- THUMBNAIL -->
+
+            <div class="gallery">
+
+                <img src="tour-trekking-fansipan.jpg" onclick="changeImage(this)">
+                <img src="chuong-trinh-sapa-3n2d-4.jpg" onclick="changeImage(this)">
+                <img src="fansipan.jpg" onclick="changeImage(this)">
+                <img src="chuong-trinh-sapa-3n2d-5.jpg" onclick="changeImage(this)">
+                <img src="chuong-trinh-sapa-3n2d-1.jpg" onclick="changeImage(this)">
+                <img src="Ha-Ngan-bia.jpg" onclick="changeImage(this)">
+
+            </div>
+
+            <!-- TAB MENU -->
+
+            <div class="tabs">
+
+            <a href="#tongquan" class="active">Tổng quan</a>
+            <a href="#lichtrinh">Lịch trình</a>
+            <a href="#danhgia">Đánh giá</a>
+            <a href="#tourtongtu">Tour tương tự</a>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div id="tongquan" class="tour-content">
+
+                <h2>Tổng quan</h2>
+
+                <p>
+                Sapa là số ít những nơi ở Việt Nam có thời tiết mát mẻ quanh năm,
+                đặc biệt với nền ẩm thực đặc trưng cùng nét văn hóa lâu đời và cảnh quan hùng vĩ
+                là những ấn tượng khó quên trong mỗi du khách đã từng đặt chân đến vùng đất này,
+                và sau đây là những điểm đến hấp dẫn mà bạn sẽ tận hưởng trong chuyến đi này:
+                <ul>
+                    <li>Tham quan khu du lịch Cát Cát.</li>
+                    <li>Chợ SaPa – nơi trao đổi mua bán nhiều loại hàng hóa, sản phẩm địa phương.</li>
+                    <li>MOANA Sapa, Cổng trời Bali, Hồ vô cực, Bàn tay vàng, Cây cô đơn, Quán Café Panorama,…</li>
+                    <li>Cổng Trời Thanh Vân Đắc Lộ là đến được tới chốn mây ngàn.</li>
+                    <li>Bích Vân Thiền Tự nằm trên độ cao trên 2.000m.</li>
+                    <li>Con đường La Hán – nơi ngự tọa 18 bức tượng La Hán bằng đồng cao 2,5m.</li>
+                </ul>
+                </p>
+
+            </div>
+
+            <div id="lichtrinh" class="tour-content">
+
+                <h2>Lịch trình</h2>
+
+                <p>
+                
+                </p>
+
+            </div>
+
+            <div id="danhgia" class="tour-content">
+
+                <h2>Đánh giá</h2>
+
+                <p>
+                
+                </p>
+
+            </div>
+
+            <div id="tourtuongtu" class="tour-content">
+
+                <h2>Tour tương tự</h2>
+
+                <p>
+                
+                </p>
+
+            </div>
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="right">
+
+    <h2 class="price">
+    Giá từ <span>2.990.000đ</span>
+    </h2>
+
+    <ul class="tour-info">
+
+    <li>
+    <i class="fa-solid fa-ticket"></i>
+    <span>Mã Tour : SP0001</span>
+    </li>
+
+    <li>
+    <i class="fa-regular fa-clock"></i>
+    <span>Thời gian : 3N2Đ</span>
+    </li>
+
+    <li>
+    <i class="fa-solid fa-plane"></i>
+    <span>Phương tiện : Xe du lịch</span>
+    </li>
+
+    <li>
+    <i class="fa-solid fa-location-dot"></i>
+    <span>Khởi hành : <b class="location">Hà Nội</b></span>
+    </li>
+
+    </ul>
+
+    <h3 class="tour-name">Sapa</h3>
+
+    <button class="book-btn">
+    Đặt Ngay
+    </button>
+
+    <div class="policy">
+
+    <div class="policy-item">
+    <i class="fa-regular fa-circle-check"></i>
+    <p><b>Cam kết vững vàng</b> - Sát cánh suốt mọi hành trình</p>
+    </div>
+
+    <div class="policy-item">
+    <i class="fa-regular fa-circle-check"></i>
+    <p><b>Hỗ trợ huỷ chỗ</b> - Tối đa 24h trước khi khởi hành</p>
+    </div>
+
+    </div>
+
+    <div class="contact">
+
+    <button class="btn-outline">
+    <i class="fa-solid fa-phone"></i>
+    Gọi điều hành tour
+    </button>
+
+    <button class="btn-outline">
+    <i class="fa-regular fa-comment"></i>
+    Liên hệ tư vấn
+    </button>
+
+    </div>
+
+</div>
+
+</div>
+
+<script>
+
+function changeImage(img){
+document.getElementById("mainImage").src = img.src;
+}
+
+const images = document.querySelectorAll(".gallery img");
+let index = 0;
+
+document.querySelector(".next").onclick = () => {
+index++;
+if(index >= images.length) index = 0;
+document.getElementById("mainImage").src = images[index].src;
+}
+
+document.querySelector(".prev").onclick = () => {
+index--;
+if(index < 0) index = images.length-1;
+document.getElementById("mainImage").src = images[index].src;
+}
+
+</script>
+
+<script id="tab-switch">
+const tabs = document.querySelectorAll(".tabs a");
+
+tabs.forEach(tab => {
+    tab.addEventListener("click", function(){
+
+        tabs.forEach(t => t.classList.remove("active"));
+
+        this.classList.add("active");
+
+    });
+});
+</script>
+ <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3 class="footer-title">Về chúng tôi</h3>
+                <p class="company-name">CÔNG TY TNHH DU LỊCH MÂY NGÀN</p>
+                <ul class="contact-info">
+                    <li><strong>Địa chỉ:</strong> 123 Đường Fansipan, Sa Pa, Lào Cai</li>
+                    <li><strong>SĐT:</strong> 024.1234.5678</li>
+                    <li><strong>Email:</strong> info@mayngan.vn</li>
+                    <li><strong>Tổng đài:</strong> 1900 6789</li>
+                    <li><strong>Hotline:</strong> 0988 123 456</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Thông tin & Hướng dẫn</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">Hướng dẫn đặt tour</a></li>
+                    <li><a href="#">Kinh nghiệm trekking</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+    </div>
+</body>
+</html>
