@@ -19,8 +19,29 @@
                 <ul>
                     <li><a href="Trang chủ.html">Trang chủ</a></li>
                     <li><a href="Trang_Chuyên_Mục.html">Tour Du lịch</a></li>
-                    <li><a href="#">Thông tin & Hướng dẫn</a></li>
-                    <li><a href="#">Về chúng tôi</a></li>
+                    <li class="dropdown">
+                        <a href="#">Thông tin & Hướng dẫn</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="chinh-sach-bao-mat.html">Chính sách bảo mật</a></li>
+                            <li><a href="dieu-khoan-su-dung.html">Điều khoản sử dụng</a></li>
+                            <li><a href="huong-dan-dat-tour.html">Hướng dẫn đặt tour</a></li>
+                            <li><a href="kinh-nghiem-trekking.html">Kinh nghiệm trekking</a></li>
+                            <li><a href="cau-hoi-thuong-gap.html">Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Về chúng tôi</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Giới thiệu công ty</a></li>
+                            <li><a href="#">Địa chỉ văn phòng</a></li>
+                            <li><a href="#">Hotline hỗ trợ</a></li>
+                            <li><a href="#">Liên hệ hợp tác</a></li>
+                            <li><a href="#">Đội ngũ hướng dẫn viên</a></li>
+                        </ul>
+                    </li>
+
                 </ul>
             </nav>
         </div>
@@ -247,6 +268,71 @@
     </div>
 
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){   
+    // ==========================================
+    // 1. HIỆU ỨNG SMOOTH SCROLL (Cuộn xuống Footer)
+    // ==========================================
+    $(".scroll-link").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800); // 800ms là tốc độ cuộn
+        }
+    });
+    // ==========================================
+    // 2. HIỆU ỨNG BACK TO TOP (Cuộn lên đầu trang)
+    // ==========================================
+    var btnToTop = $('#back-to-top');
+    // Hiển thị/Ẩn nút dựa trên vị trí cuộn chuột
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+            btnToTop.fadeIn(300); // Hiện nút khi cuộn xuống quá 300px
+        } else {
+            btnToTop.fadeOut(300); // Ẩn nút khi ở gần đầu trang
+        }
+    });
+    // Xử lý khi click vào nút Back to Top
+    btnToTop.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 800); // Cuộn mượt về 0
+    });
+});
+</script>
+
+<div id="back-to-top" title="Về đầu trang">
+    <span>&#8593;</span>
+</div>
+
+<script>
+$(document).ready(function(){
+    // Khi click vào thẻ <a> của menu Dropdown
+    $('.dropdown > a').click(function(e){
+        e.preventDefault(); // Ngăn trang web nhảy lên đầu khi ấn dấu #
+        
+        var parent = $(this).parent();
+
+        // Đóng các dropdown khác đang mở
+        $('.dropdown').not(parent).removeClass('show-menu');
+
+        // Bật/Tắt menu hiện tại
+        parent.toggleClass('show-menu');
+    });
+
+    // Nếu ấn ra ngoài vùng menu thì đóng menu lại
+    $(document).click(function(e) {
+        if (!$(e.target).closest('.dropdown').length) {
+            $('.dropdown').removeClass('show-menu');
+        }
+    });
+});
+</script>
 
 </body>
 </html>

@@ -666,3 +666,85 @@ p, li, span, .contact-infoStrong { font-weight: 300; }
 @media (max-width: 600px) {
     .tour-grid { grid-template-columns: 1fr; } /* 1 cột cho mobile */
 }
+/* Style cho nút Back to Top */
+#back-to-top {
+    position: fixed; /* Cố định vị trí trên màn hình */
+    bottom: 30px;    /* Cách đáy 30px */
+    right: 30px;     /* Cách bên phải 30px */
+    width: 50px;     /* Chiều rộng */
+    height: 50px;    /* Chiều cao */
+    background-color: #f1c40f; /* Màu vàng (lấy theo màu menu Mây Ngàn) */
+    color: #fff;     /* Màu mũi tên trắng */
+    border-radius: 50%; /* Làm nút tròn */
+    text-align: center; /* Căn giữa ký tự */
+    line-height: 46px; /* Căn giữa theo chiều dọc */
+    font-size: 24px;   /* Kích thước mũi tên */
+    cursor: pointer;   /* Hiện con trỏ bàn tay khi di chuột vào */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Tạo bóng đổ cho nổi bật */
+    z-index: 1000;    /* Đảm bảo luôn nằm trên các thành phần khác */
+    transition: all 0.3s ease; /* Hiệu ứng mượt khi hover */
+    display: none;     /* Mặc định ẩn đi */
+}
+
+/* Hiệu ứng khi di chuột vào nút */
+#back-to-top:hover {
+    background-color: #2c3e50; /* Đổi sang màu tối (màu footer) */
+    transform: translateY(-5px); /* Nhích nhẹ lên trên 5px */
+}
+/* 1. Thiết lập cho thẻ cha (Mục Thông tin/Về chúng tôi) */
+.main-nav ul li.dropdown {
+    position: relative; /* Gốc tọa độ cố định để menu con không trôi tự do */
+}
+
+/* 2. ĐỊNH DẠNG VÀ ẨN MENU CON (Xóa bỏ sự xuất hiện sai lệch) */
+.dropdown-menu {
+    display: none !important;  /* ÉP BUỘC ẨN đi khi chưa rê chuột */
+    position: absolute;        /* NHẤC MENU LÊN - Không chiếm chỗ, không đẩy Header */
+    top: 100%;                 /* Xuất hiện sát mép dưới thanh Header */
+    left: 0;
+    background-color: #ffffff;
+    min-width: 230px;          /* Độ rộng bảng menu */
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Đổ bóng sang trọng */
+    border-radius: 4px;
+    z-index: 9999;             /* Đảm bảo luôn nằm trên Video/Banner */
+}
+
+/* 3. HIỆN KHI RÊ CHUỘT (HOVER) */
+.main-nav ul li.dropdown:hover > .dropdown-menu {
+    display: block !important; /* Chỉ hiển thị khi có tương tác chuột */
+    animation: fadeInDropdown 0.3s ease;
+}
+
+/* 4. STYLE CÁC MỤC BÊN TRONG (ĐÚNG MÀU ẢNH 2) */
+.dropdown-menu li {
+    width: 100%;
+    margin: 0 !important;      /* Triệt tiêu margin cũ gây lệch hàng */
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px !important;
+    color: var(--dark-green) !important;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s;
+    margin: 0 !important;      /* Đảm bảo không bị lùi lề trái */
+    text-align: left;
+}
+
+/* HIỆU ỨNG KHI DI CHUỘT VÀO MỤC CON - CHUẨN ẢNH 2 */
+.dropdown-menu li a:hover {
+    background-color: #fcf4d9 !important; /* Nền vàng nhạt */
+    color: var(--accent-orange) !important; /* Chữ màu cam */
+    padding-left: 25px !important;       /* Hiệu ứng dịch sang phải */
+}
+
+/* Hiệu ứng mượt */
+@keyframes fadeInDropdown {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
