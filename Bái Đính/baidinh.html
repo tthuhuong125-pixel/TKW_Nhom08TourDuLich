@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tour Bái Đính</title>
 <link rel="stylesheet" href="baidinh.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -60,14 +61,12 @@
             <!-- THUMBNAIL -->
 
             <div class="gallery">
-
                 <img src="baidinh1.webp" onclick="changeImage(this)">
                 <img src="baidinh3.webp" onclick="changeImage(this)">
                 <img src="baidinh4.webp" onclick="changeImage(this)">
                 <img src="baidinh5.webp" onclick="changeImage(this)">
                 <img src="baidinh6.webp" onclick="changeImage(this)">
                 <img src="baidinh2.webp" onclick="changeImage(this)">
-
             </div>
 
             <!-- TAB MENU -->
@@ -209,41 +208,68 @@
 </div>
 
 <script>
+$(document).ready(function() {
+    // 1. Khởi tạo các biến
+    const $images = $(".gallery img");
+    const $mainImg = $("#mainImage");
+    let currentIndex = 0;
+    let autoSlide;
 
-function changeImage(img){
-document.getElementById("mainImage").src = img.src;
-}
+    // 2. Hàm cập nhật ảnh
+    function updateImage(index) {
+        // Lấy src của ảnh trong gallery tại vị trí index
+        let newSrc = $images.eq(index).attr("src");
+        
+        // Hiệu ứng mờ dần khi đổi ảnh (Simple jQuery Effect)
+        $mainImg.fadeOut(200, function() {
+            $(this).attr("src", newSrc).fadeIn(200);
+        });
+        
+        // Cập nhật lại index hiện tại
+        currentIndex = index;
+    }
 
-const images = document.querySelectorAll(".gallery img");
-let index = 0;
+    // 3. Hàm bắt đầu tự động chạy
+    function startAutoSlide() {
+        autoSlide = setInterval(function() {
+            currentIndex++;
+            if (currentIndex >= $images.length) {
+                currentIndex = 0;
+            }
+            updateImage(currentIndex);
+        }, 3000); // Thay đổi ảnh sau mỗi 3 giây
+    }
 
-document.querySelector(".next").onclick = () => {
-index++;
-if(index >= images.length) index = 0;
-document.getElementById("mainImage").src = images[index].src;
-}
-
-document.querySelector(".prev").onclick = () => {
-index--;
-if(index < 0) index = images.length-1;
-document.getElementById("mainImage").src = images[index].src;
-}
-
-</script>
-
-<script id="tab-switch">
-const tabs = document.querySelectorAll(".tabs a");
-
-tabs.forEach(tab => {
-    tab.addEventListener("click", function(){
-
-        tabs.forEach(t => t.classList.remove("active"));
-
-        this.classList.add("active");
-
+    // 4. Các sự kiện Click
+    // Khi click nút Next
+    $(".next").click(function() {
+        clearInterval(autoSlide); // Dừng tự động khi người dùng can thiệp
+        currentIndex = (currentIndex + 1) % $images.length;
+        updateImage(currentIndex);
+        startAutoSlide(); // Chạy lại sau khi click
     });
+
+    // Khi click nút Prev
+    $(".prev").click(function() {
+        clearInterval(autoSlide);
+        currentIndex = (currentIndex - 1 + $images.length) % $images.length;
+        updateImage(currentIndex);
+        startAutoSlide();
+    });
+
+    // Khi click trực tiếp vào ảnh nhỏ (Thumbnail)
+    $images.click(function() {
+        clearInterval(autoSlide);
+        let index = $images.index(this);
+        updateImage(index);
+        startAutoSlide();
+    });
+
+    // 5. Kích hoạt tự động khi vừa tải trang
+    startAutoSlide();
 });
 </script>
+
  <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-col">
